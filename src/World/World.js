@@ -1,9 +1,35 @@
-class World {
-  // 1. Create an instance of the World app
-  constructor(container) {}
+import { createCamera } from "./components/camera.js";
+import { createCube } from "./components/cube.js";
+import { createScene } from "./components/scene.js";
 
-  // 2. Render the scene
-  render() {}
+import { createRenderer } from "./systems/renderer.js";
+import { Resizer } from "./systems/Resizer.js";
+
+// These variables are module-scoped: we cannot access them
+// from outside the module
+
+class World {
+  #camera;
+  #renderer;
+  #scene;
+
+  constructor(container) {
+    this.#camera = createCamera();
+    this.#scene = createScene();
+    this.#renderer = createRenderer();
+    container.append(this.#renderer.domElement);
+
+    const cube = createCube();
+
+    this.#scene.add(cube);
+
+    const resizer = new Resizer(container, this.#camera, this.#renderer);
+  }
+
+  render() {
+    // draw a single frame
+    this.#renderer.render(this.#scene, this.#camera);
+  }
 }
 
 export { World };

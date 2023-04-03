@@ -1,16 +1,3 @@
-/**
-Day 2: https://discoverthreejs.com/book/first-steps/world-app/
-
-Initial Setup
-Create the scene
-Create a camera
-Create the cube and add it to the scene
-Create the renderer
-Render the scene
-
-Note:
-
-*/
 import { World } from "./World/World.js";
 
 // create the main function
