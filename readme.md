@@ -48,3 +48,26 @@ Note:
 - Systems are things that operate on components or other systems
 
 - The `Resizer` gets a capital `R` because it will be a class
+
+# Day 3: https://discoverthreejs.com/book/first-steps/physically-based-rendering/
+
+1. Lighting
+2. MeshStandardMaterial
+
+Note:
+
+- The most important three.js PBR (physically based rendering) material, the `MeshStandardMaterial`
+
+- Physically correct lighting means calculating how light fades with distance from a light source (attenuation) using real-world physics equations ( `renderer.physicallyCorrectLights = true;`)
+
+- Using meters is a convention rather than a rule ( `1 unit=1 meter`).
+
+- `DirectionalLight` => Sunlight
+
+- `PointLight` => Light Bulbs
+
+- `RectAreaLight` => Strip lighting or bright windows
+
+- `SpotLight` => Spotlights
+
+- Shadows are Disabled By Default
