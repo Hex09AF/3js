@@ -71,3 +71,28 @@ Note:
 - `SpotLight` => Spotlights
 
 - Shadows are Disabled By Default
+
+# Day 4: https://discoverthreejs.com/book/first-steps/transformations/
+
+1. Translate: Vector class
+2. Scale: Vector class
+3. Representing Rotations: the Euler class
+4. The Local/World Matrix
+
+Note;
+
+- The top-level scene defines world space, and every other object defines its own local space.
+
+- When we move the child object around, it will move relative to the parent object’s coordinate system
+
+- Positions are stored in the `Vector3` Class
+
+- Values less than zero and greater than −1 will mirror and squash the object
+
+- Cameras and Lights Cannot be Scaled
+
+- By default, three.js will perform rotations around the X-axis, then around the Y-axis, and finally around the Z-axis, in an object’s local space. We can change this using the Euler.order property. The default order is called ‘XYZ’, but ‘YZX’, ‘ZXY’, ‘XZY’, ‘YXZ’ and ‘ZYX’ are also possible.
+
+- Angles in three.js are specified using radians, not degrees. The only exception is the PerspectiveCamera.fov property which uses degrees to match real-world photography conventions.
+
+- Not all objects can be rotated. For example, the DirectionalLight we introduced in the last chapter cannot be rotated.
