@@ -96,3 +96,16 @@ Note;
 - Angles in three.js are specified using radians, not degrees. The only exception is the PerspectiveCamera.fov property which uses degrees to match real-world photography conventions.
 
 - Not all objects can be rotated. For example, the DirectionalLight we introduced in the last chapter cannot be rotated.
+
+# Day 5: https://discoverthreejs.com/book/first-steps/responsive-design/
+
+1. Anti-Aliasing
+2. Seamlessly Handling Browser Window Size Changes
+
+Note: 
+
+- Don’t do heavy calculations in the resize function.
+
+- If you find this function growing in size, you might consider using a throttling function such as `lodash’s _.throttle` to prevent it from being called too often
+
+- `devicePixelRatio` values other than 1 render the scene at a higher or low resolution and then scale it to fit in the canvas. A DPR of 2 will render the scene at double resolution and scale down, while a DPR of 0.5 will render at half resolution and scale up. As you can imagine, high DPR values are very expensive to render!
