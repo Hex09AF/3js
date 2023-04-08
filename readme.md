@@ -102,7 +102,7 @@ Note;
 1. Anti-Aliasing
 2. Seamlessly Handling Browser Window Size Changes
 
-Note: 
+Note:
 
 - Don’t do heavy calculations in the resize function.
 
@@ -135,3 +135,23 @@ Summary:
 - modular
 - and well-structured
 - movement
+
+# Day 7: https://discoverthreejs.com/book/first-steps/textures-intro/
+
+1. Texture mapping
+2. Types of Data that can be Stored in a Texture
+3. UV Mapping
+4. Loading a Texture
+
+Note:
+
+- texture mapping means taking an image and stretching it over the surface of a 3D object
+
+- There are many ways of preparing images for use as textures, but the easiest is to take a photograph of an object
+
+- An image is a 2D picture designed to be viewed by a human.
+- A texture is specially prepared data used for various purposes in 3D graphics.
+
+- We’ll refer to the 2D texture coordinate using the letters U and V. This is where the name UV mapping comes from.
+
+- We can use this empty texture immediately, even before the image has finished loading. However, until the image data has fully loaded, the texture will show as black.
