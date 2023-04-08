@@ -109,3 +109,29 @@ Note:
 - If you find this function growing in size, you might consider using a throttling function such as `lodash’s _.throttle` to prevent it from being called too often
 
 - `devicePixelRatio` values other than 1 render the scene at a higher or low resolution and then scale it to fit in the canvas. A DPR of 2 will render the scene at double resolution and scale down, while a DPR of 0.5 will render at half resolution and scale up. As you can imagine, high DPR values are very expensive to render!
+
+# Day 6: https://discoverthreejs.com/book/first-steps/animation-loop/
+
+1. Creating an Animation Loop with three.js
+2. Creating the Loop with .setAnimationLoop
+3. Centralized or Decentralized?
+4. Fixed and Dynamic Frames
+
+Note:
+
+- Internally, the loop is created using `.requestAnimationFrame`. This built-in browser method intelligently schedules frames in sync with the refresh rate of your monitor and will smoothly reduce the frame rate if your hardware can’t keep up.
+
+- `.getDelta` tells us how much time has passed since the last time we called `.getDelta`
+
+Summary:
+
+- We have lights
+- colors
+- physically correct rendering
+- anti-aliasing
+- automatic-resizing
+- we know how to move objects around in 3D space
+- and our code is clean
+- modular
+- and well-structured
+- movement
