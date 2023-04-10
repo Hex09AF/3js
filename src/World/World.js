@@ -30,9 +30,9 @@ class World {
 
     // this.#loop.addMesh(cube);
 
-    const light = createLights();
+    const { ambientLight, mainLight } = createLights();
 
-    this.#scene.add(cube, light);
+    this.#scene.add(ambientLight, mainLight, cube);
 
     const controls = createControls(this.#camera, this.#renderer.domElement);
 

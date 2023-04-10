@@ -16,13 +16,13 @@ function createMaterial() {
 
   // load a texture
   const texture = textureLoader.load("/assets/textures/uv-test-bw.png");
-  const texture2 = textureLoader.load("/assets/textures/uv-test-col.png");
+  // const texture2 = textureLoader.load("/assets/textures/uv-test-col.png");
 
   // create a "standard" material using
   // the texture we just loaded as a color map
   const material = new MeshStandardMaterial({
     map: texture,
-    lightMap: texture2,
+    // lightMap: texture2,
   });
 
   return material;
