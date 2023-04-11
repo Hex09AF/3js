@@ -30,3 +30,14 @@ Note:
 - Changing the position of the AmbientLight has no effect either.
 
 - We’ll usually set the intensity of the AmbientLight to a lower value than the direct light it has been paired with
+
+# day 10: https://discoverthreejs.com/book/first-steps/organizing-with-group/
+
+1. Adding Many Objects to the Scene
+2. The `Group` Object
+3. Custom Properties like `.tick` are Not Cloned
+4. Create the meshGroup.js Module
+
+Note:
+
+- When we move a group around, all of its children move too. Likewise, if we rotate or scale a group, all of its children will be rotated or scaled too. However, the children can also be translated, rotated, or scaled independently.
