@@ -2,7 +2,10 @@ import { OrbitControls } from "../../../vendor/three/examples/jsm/controls/Orbit
 
 function createControls(camera, canvas) {
   const controls = new OrbitControls(camera, canvas);
+
   controls.enableDamping = true;
+
+  controls.target.y = 1;
 
   controls.tick = () => controls.update();
 

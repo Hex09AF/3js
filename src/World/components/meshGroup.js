@@ -14,6 +14,7 @@ function createMeshGroup() {
   const geometry = new SphereBufferGeometry(0.25, 16, 16);
 
   const material = new MeshStandardMaterial({
+    flatShading: true,
     color: "indigo",
   });
 

@@ -41,3 +41,13 @@ Note:
 Note:
 
 - When we move a group around, all of its children move too. Likewise, if we rotate or scale a group, all of its children will be rotated or scaled too. However, the children can also be translated, rotated, or scaled independently.
+
+# day 11: [first-steps/built-in-geometries](https://discoverthreejs.com/book/first-steps/built-in-geometries/)
+
+1. The `Material.flatShading` Property
+2. Working With Rotations
+3. A Simple Toy Train Model
+
+Note: 
+
+- Take a deeper look at using transformations, in particular rotation, which is the trickiest of the three transformations to use
