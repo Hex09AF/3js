@@ -9,6 +9,7 @@ import { Resizer } from "./systems/Resizer.js";
 import { Loop } from "./systems/Loop.js";
 
 import { createControls } from "./systems/controls.js";
+import { createAxesHelper, createGridHelper } from "./components/helpers.js";
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
@@ -39,6 +40,8 @@ class World {
     this.#loop.addMesh(controls);
 
     const resizer = new Resizer(container, this.#camera, this.#renderer);
+
+    this.#scene.add(createAxesHelper(), createGridHelper());
   }
 
   render() {

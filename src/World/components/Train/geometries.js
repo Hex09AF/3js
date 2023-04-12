@@ -12,7 +12,7 @@ function createGeometries() {
   const wheel = new CylinderBufferGeometry(0.4, 0.4, 1.75, 16);
 
   // different values for the top and bottom radius creates a cone shape
-  const chimney = new CylinderBufferGeometry(0.3, 0.1, 0.5);
+  const chimney = new CylinderBufferGeometry(0.3, 0.1, 0.5, 16);
 
   return {
     cabin,
