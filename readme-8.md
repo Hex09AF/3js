@@ -48,6 +48,27 @@ Note:
 2. Working With Rotations
 3. A Simple Toy Train Model
 
-Note: 
+Note:
 
 - Take a deeper look at using transformations, in particular rotation, which is the trickiest of the three transformations to use
+
+# day 12: [first-steps/load-models](https://discoverthreejs.com/book/first-steps/load-models/)
+
+1. Load 3D Models in glTF Format
+2. The `GLTFLoader` Plugin
+3. Create the birds.js Module
+4. Extract the Mesh from the Loaded Data
+
+Note:
+
+- Originally released in 2017, glTF is now the best format for exchanging 3D assets on the web, and in many other fields
+
+- `gltfData.animations` is an array of animation clips. Here, there’s a flying animation. We’ll make use of this in the next chapter.
+- `gltfData.assets` contains metadata showing this glTF file was created using the Blender exporter.
+- `gltfData.cameras` is an array of cameras. This file doesn’t contain any cameras, so the array is empty.
+- `gltfData.parser` contains technical details about the GLTFLoader.
+- `gltfData.scene` is a Group containing any meshes from the file. This is where we’ll find the parrot model.
+- `gltfData.scenes` The glTF format supports storing multiple scenes in a single file. In practice, this feature is rarely used.
+- `gltfData.userData` may contain additional non-standard data.
+
+- Usually, all you need is `.animations`, `.cameras`, and `.scene` (not `.scenes`!) and you can safely ignore everything else.

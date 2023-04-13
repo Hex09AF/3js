@@ -1,3 +1,4 @@
+import { loadBirds } from "./components/birds/birds.js";
 import { createCamera } from "./components/camera.js";
 import { createMeshGroup } from "./components/meshGroup.js";
 import { createLights } from "./components/lights.js";
@@ -42,6 +43,12 @@ class World {
     const resizer = new Resizer(container, this.#camera, this.#renderer);
 
     this.#scene.add(createAxesHelper(), createGridHelper());
+  }
+
+  async init() {
+    const { parrot, flamingo, stork } = await loadBirds();
+
+    this.#scene.add(parrot, flamingo, stork);
   }
 
   render() {
