@@ -1,4 +1,4 @@
-import { loadBirds } from "./components/birds/birds.js";
+import { loadBirds } from "./components/Birds/Birds.js";
 import { createCamera } from "./components/camera.js";
 import { createMeshGroup } from "./components/meshGroup.js";
 import { createLights } from "./components/lights.js";
