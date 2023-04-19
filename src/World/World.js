@@ -48,6 +48,9 @@ class World {
   async init() {
     const { parrot, flamingo, stork } = await loadBirds();
 
+    this.#loop.addMesh(parrot);
+    this.#loop.addMesh(flamingo);
+    this.#loop.addMesh(stork);
     this.#scene.add(parrot, flamingo, stork);
   }
 
