@@ -72,3 +72,19 @@ Note:
 - `gltfData.userData` may contain additional non-standard data.
 
 - Usually, all you need is `.animations`, `.cameras`, and `.scene` (not `.scenes`!) and you can safely ignore everything else.
+
+# day 13: [first-steps/animation-system](https://discoverthreejs.com/book/first-steps/animation-system/)
+
+1. The Animation System: Creating Animations
+
+2. Play the Animation Clips from Parrot.glb, Flamingo.glb, and Stork.glb
+
+Note:
+
+- There are three elements involved in creating animations: `keyframes`, `KeyframeTrack`, and `AnimationClip`.
+
+- the `AnimationMixer` allows us to turn a static object into an animated object, and finally, the `AnimationAction` connects a clip to the object and allows us to control it using actions such as play, pause, loop, reset, and so on
+
+- Note that, although we called `.play`, the animation will not start yet. We still need to update the mixer in the animation loop, which we’ll do in a moment.
+
+- Another thing you need to consider is what happens when the character stops walking and starts running. If you move instantly from one animation to another, it won’t look very good. Fortunately, the AnimationAction contains controls that allow you to blend two clips, gradually slow a clip to a stop, loop a clip, play in reverse, or at a different speed, and lots more
